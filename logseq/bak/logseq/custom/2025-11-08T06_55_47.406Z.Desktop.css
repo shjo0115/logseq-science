@@ -1,0 +1,41 @@
+/* 좌:문제 / 우:해설 2열 레이아웃 */
+.twocolumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: start;
+  margin: 0.8rem 0 1.6rem;
+}
+.twocolumn > div {
+  background: var(--ls-primary-background-color);
+  border: 1px solid var(--ls-border-color);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+/* 폭 좁을 때 자동 1열로 전환 (모바일, 아이패드용) */
+@media (max-width: 840px) {
+  .twocolumn { grid-template-columns: 1fr; }
+}
+
+
+/* 이미지가 칸을 넘치지 않게 */
+.twocolumn img,
+.imgbox img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 이미지 박스 카드 스타일 */
+.imgbox {
+  background: var(--ls-primary-background-color);
+  border: 1px solid var(--ls-border-color);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+}
+
+/* 필요 시 여백을 더 촘촘하게 */
+.tight > * + * { margin-top: 0.4rem; }
+
+/* PDF/HTML에서 이미지가 서로 붙어 보이도록 살짝 그림자 */
+.imgbox { box-shadow: 0 2px 5px rgba(0,0,0,.04); }

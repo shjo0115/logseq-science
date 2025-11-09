@@ -1,0 +1,14 @@
+/* 문제-해설을 좌우로 나누는 레이아웃 */
+.twocolumn {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.2rem;
+align-items: start;
+margin-bottom: 1.5rem;
+}
+.twocolumn > div {
+background-color: var(--ls-primary-background-color);
+padding: 0.8rem 1rem;
+border: 1px solid var(--ls-border-color);
+border-radius: 8px;
+}
